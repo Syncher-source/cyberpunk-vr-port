@@ -43,6 +43,7 @@
 #include <RED4ext/RED4ext.hpp>
 
 #include "Core/GameBuild.hpp"
+#include "Core/CpuAffinity.hpp"
 #include "Hooks/RenderDocBridge.hpp"
 #include "Runtimes/OpenXRManager.hpp"
 #include "Overlay/ImGuiOverlay.hpp"
@@ -158,6 +159,8 @@ RED4EXT_C_EXPORT bool RED4EXT_CALL Main(RED4ext::v1::PluginHandle handle, RED4ex
         cvr::paths::MigrateLegacyLayout();
         InitRuntimePaths();
         Log("=== CyberpunkVRPort red4ext plugin loaded (no dxgi proxy) ===\n");
+        // Before the engine starts its job threads (xr_cpu_affinity, Core/CpuAffinity.hpp).
+        cvr::cpu::ApplyAffinity();
         // FIRST, and deliberately: registering the RTTI callbacks is cheap and has a window. The
         // graphics init below waits on the game's device and can take seconds; doing it first is
         // how the natives would come back nil in Lua.
