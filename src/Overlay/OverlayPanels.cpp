@@ -1087,7 +1087,7 @@ bool DrawLiveControls(LiveControlsUiState& state,int section,bool* foveatedEditi
                 UI::EndDisabled();
             }
 
-            cvr::fbt::game::DrawSettingsSection();   // Fbt/Game/Menu.cpp
+            changed |= cvr::fbt::game::DrawSettingsSection(state);   // Fbt/Game/Menu.cpp
 
             // Weapon aim: bullets/projectiles fly down the WEAPON BARREL (controller-pointed) instead
             // of the camera crosshair. Hooks the projectile launch orientation provider and feeds it

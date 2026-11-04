@@ -14,7 +14,7 @@ outside the game, records and replays sessions: FBT bug reports go there, with a
 
 1. In SteamVR, *Manage Vive Trackers*: give each tracker its role, **Waist**, **Left Foot** and **Right Foot**. The
    trackers are found by these roles (OpenXR `XR_HTCX_vive_tracker_interaction`), not by their order.
-2. `xr_vive_trackers=1` in `vrport.ini` (read at the start of the session).
+2. In the settings, Full-body tracking: *Enable Vive trackers*, then restart the game.
 3. Load a save and turn on the three switches in the settings: *V's legs follow the trackers*, *V's spine and head
    follow the headset*, *V's arms follow the controllers*. They are off on a new install and stay as you leave them.
 4. *Calibrate full-body tracking* in the settings (in game only, not in the lobby), at every session: belts and
@@ -41,7 +41,7 @@ ladders, swimming, takedowns, finishers, body carry) cover it too.
 | `Calibration.cpp` | the three-step calibration on the library's `Calibrator`; `fbt_calibration.ini` |
 | `Helpers.cpp` | the calibration's graphics in the view (horizon line, cross, lights, lines, arrow, the step's text) |
 | `GameFont.cpp` | the step texts in the game's own font, read from its archives for the game's language |
-| `Menu.cpp` | the settings section (the calibration button, the switches) |
+| `Menu.cpp` | the settings section (the trackers' switch, the calibration button, the body switches) |
 | `Natives.cpp` | the script natives for the CET menu (`VRFbtCalibrating`, `VRFbtCalibrationStep`, `VRFbtSetCalibrationText`) |
 
 ## Where the port calls in
@@ -58,8 +58,8 @@ One line each, except where noted.
 | `Hooks/BodyYawFollow.cpp` | paused while `Calibrating()` |
 | `Anim/CharacterRig.cpp` | `CyberpunkVR_ClipBodyMoves` only while not `BodyActive()` (the trackers move the body through slides, falls and jumps). Also, for now: V's reference pose and rig file for the calibration (`VRIK_ReadFbtReference`, `VRIK_HoldReferencePose`, `VRIK_FbtRigPath`, the rig dump) and `VRIK_MarkLegOwned`, so the model cache replays our legs |
 | `Natives/VrMenu.cpp` | the buttons kept from the game while `Calibrating()` (each step is a pull of both triggers) |
-| `Overlay/OverlayPanels.cpp` | `fbt::game::DrawSettingsSection()` |
+| `Overlay/OverlayPanels.cpp` | `fbt::game::DrawSettingsSection(state)` |
 | `Overlay/ImGuiOverlay.cpp` | `DrawFbtCalibrationHelpers()`, `LoadCyberpunkFont` |
 | `Natives/Registration.cpp` | `fbt::game::RegisterNatives(rtti)` |
-| `Core/LiveControlsPoll.cpp` | the `xr_vive_trackers` key |
+| `Core/LiveControlsPoll.cpp`, `Overlay/LiveControlsUi.hpp` | the `xr_vive_trackers` key and its switch in the panel's state |
 | CET `CyberpunkVRPort_Menu` | `menu.lua`: the menu closes while calibrating and hands the step texts over translated; `lang/settings`: the texts in all 18 languages |

@@ -2069,6 +2069,7 @@ LiveControlsUiState MakeLiveControlsUiState() {
     state.xrHudFollowMode=g_liveControls.xrHudFollowMode;
     state.xrHudStereoDepth=g_liveControls.xrHudStereoDepth;
     state.xrGripFromFingers=cvr::fingergrip::GripFromFingers()?1:0;
+    state.xrViveTrackers=g_viveTrackersSetting;
     state.xrFingerBones=CyberpunkVR_FingerBones;
     state.xrFingerSpreadOn=CyberpunkVR_FingerSpreadOn;
     state.xrFingerSpread=CyberpunkVR_FingerSpread;
@@ -2572,6 +2573,7 @@ extern "C" void SetLiveControlsUiState(const LiveControlsUiState* state, int per
     g_liveControls.xrHudFollowMode=state->xrHudFollowMode==1;
     g_liveControls.xrHudStereoDepth=state->xrHudStereoDepth!=0;
     cvr::fingergrip::SetGripFromFingers(state->xrGripFromFingers!=0);
+    g_viveTrackersSetting=state->xrViveTrackers!=0;
     CyberpunkVR_FingerBones=state->xrFingerBones!=0;
     CyberpunkVR_FingerSpread=std::clamp(state->xrFingerSpread,0.0f,2.0f);
     CyberpunkVR_FingerSpreadOn=state->xrFingerSpreadOn!=0;
