@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "Non pris : regardez droit la ligne d'horizon jusqu'à ce qu'elle devienne verte, puis appuyez à nouveau",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "Non pris : tendez les deux bras le long de la croix, puis restez immobile à nouveau",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "Non pris : tenez-vous droit, casque, trackers et manettes suivis, puis appuyez à nouveau",
+  ["FINGER TRACKING"] = "SUIVI DES DOIGTS",
+  ["Enable finger tracking"] = "Activer le suivi des doigts",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "Chaque doigt de V suit le vôtre, grâce au suivi des mains (gants à suivi des doigts, manettes Index).\nL'activation prend effet au prochain lancement du jeu. Désactivé : poses des doigts via les boutons.",
+  ["Grip input from finger position instead of the sensor"] = "Saisie à partir de la position des doigts plutôt que du capteur",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "La saisie est un poing ou un pouce levé, d'après la position des doigts,\net non le capteur de prise de la manette : une main détendue ne saisit jamais.",
+  ["Enable finger spread"] = "Activer l'écartement des doigts",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "Les doigts de V s'écartent aussi sur les côtés comme les vôtres.\nDésactivé : les doigts se plient seulement, selon la flexion.",
+  ["Finger spread"] = "Écartement des doigts",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "Les doigts de V s'écartent sur le côté comme les vôtres.\n0 : désactivé, les doigts se plient seulement. 1 : par défaut.",
 }

@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "Не прийнято: дивіться прямо на лінію горизонту, доки вона не стане зеленою, потім натисніть знову",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "Не прийнято: витягніть обидві руки вздовж хреста, потім знову завмріть",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "Не прийнято: станьте рівно, шолом, трекери й контролери відстежуються, потім натисніть знову",
+  ["FINGER TRACKING"] = "ВІДСТЕЖЕННЯ ПАЛЬЦІВ",
+  ["Enable finger tracking"] = "Увімкнути відстеження пальців",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "Кожен палець V повторює ваш, за відстеженням рук (рукавички з відстеженням пальців, контролери Index).\nУвімкнення діє з наступного запуску гри. Вимк.: пози пальців від кнопок.",
+  ["Grip input from finger position instead of the sensor"] = "Хват за положенням пальців замість датчика",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "Хват — це кулак або піднятий великий палець, за положенням пальців,\nа не за датчиком хвату контролера: розслаблена рука ніколи не хапає.",
+  ["Enable finger spread"] = "Увімкнути розведення пальців",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "Пальці V також розводяться в боки, як ваші.\nВимк.: пальці лише згинаються, за згином.",
+  ["Finger spread"] = "Розведення пальців",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "Пальці V розводяться в боки, як ваші.\n0: вимк., пальці лише згинаються. 1: за замовчуванням.",
 }

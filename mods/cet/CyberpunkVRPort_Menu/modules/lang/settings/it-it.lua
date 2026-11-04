@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "Non preso: guarda dritto la linea dell'orizzonte finché diventa verde, poi premi di nuovo",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "Non preso: tendi entrambe le braccia lungo la croce, poi resta di nuovo fermo",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "Non preso: stai dritto con visore, tracker e controller tracciati, poi premi di nuovo",
+  ["FINGER TRACKING"] = "TRACCIAMENTO DELLE DITA",
+  ["Enable finger tracking"] = "Abilita tracciamento delle dita",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "Ogni dito di V segue il tuo, dal tracciamento delle mani (guanti con tracciamento delle dita, controller Index).\nL'attivazione si applica al prossimo avvio del gioco. Disattivato: pose delle dita dai pulsanti.",
+  ["Grip input from finger position instead of the sensor"] = "Grip input dalla posizione delle dita piuttosto che dal sensore",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "La presa è un pugno o un pollice in su, dalla posizione delle dita,\nnon dal sensore di presa del controller: una mano rilassata non afferra mai.",
+  ["Enable finger spread"] = "Abilita apertura delle dita",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "Le dita di V si allargano anche lateralmente come le tue.\nDisattivato: le dita si piegano soltanto, dalla flessione.",
+  ["Finger spread"] = "Apertura delle dita",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "Le dita di V si allargano lateralmente come le tue.\n0: disattivato, le dita si piegano soltanto. 1: predefinito.",
 }

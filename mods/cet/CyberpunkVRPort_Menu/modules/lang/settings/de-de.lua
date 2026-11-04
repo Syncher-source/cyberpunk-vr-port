@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "Nicht übernommen: gerade auf die Horizontlinie schauen, bis sie grün wird, dann erneut drücken",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "Nicht übernommen: beide Arme gestreckt entlang des Kreuzes halten, dann wieder stillhalten",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "Nicht übernommen: gerade stehen, Headset, Tracker und Controller getrackt, dann erneut drücken",
+  ["FINGER TRACKING"] = "FINGERTRACKING",
+  ["Enable finger tracking"] = "Fingertracking aktivieren",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "Jeder Finger von V folgt deinem, per Handtracking (Handschuhe mit Fingertracking, Index-Controller).\nDas Einschalten gilt ab dem nächsten Spielstart. Aus: Fingerposen über die Tasten.",
+  ["Grip input from finger position instead of the sensor"] = "Greifeingabe aus der Fingerstellung statt vom Sensor",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "Greifen ist eine Faust oder ein Daumen hoch, aus der Stellung der Finger,\nnicht vom Griffsensor des Controllers: eine entspannte Hand greift nie.",
+  ["Enable finger spread"] = "Fingerspreizung aktivieren",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "Vs Finger spreizen sich auch seitlich wie deine.\nAus: die Finger beugen sich nur, nach der Krümmung.",
+  ["Finger spread"] = "Fingerspreizung",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "Vs Finger spreizen sich seitlich wie deine.\n0: aus, die Finger beugen sich nur. 1: Standard.",
 }

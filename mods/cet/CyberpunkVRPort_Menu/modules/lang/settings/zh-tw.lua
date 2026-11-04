@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "未採用：直視地平線直到它變綠，然後再按一次",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "未採用：沿十字架伸直雙臂，然後再次保持不動",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "未採用：站直，確保頭戴裝置、追蹤器和控制器都被追蹤，然後再按一次",
+  ["FINGER TRACKING"] = "手指追蹤",
+  ["Enable finger tracking"] = "啟用手指追蹤",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "V 的每根手指都跟隨你的手指（手部追蹤：手指追蹤手套、Index 控制器）。\n開啟後在下次啟動遊戲時生效。關閉：由按鍵決定手指姿勢。",
+  ["Grip input from finger position instead of the sensor"] = "根據手指位置而非感測器輸入握持",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "握持為握拳或豎起大拇指，由手指位置判斷，\n而非控制器的握持感測器：放鬆的手永遠不會握持。",
+  ["Enable finger spread"] = "啟用手指張開",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "V 的手指也會像你的一樣向兩側張開。\n關閉：手指只按彎曲程度彎曲。",
+  ["Finger spread"] = "手指張開",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "V 的手指會像你的手指一樣向兩側張開。\n0：關閉，手指只會彎曲。1：預設。",
 }

@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "ไม่รับ: มองตรงไปที่เส้นขอบฟ้าจนเป็นสีเขียว แล้วกดอีกครั้ง",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "ไม่รับ: เหยียดแขนทั้งสองตรงตามไม้กางเขน แล้วอยู่นิ่งอีกครั้ง",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "ไม่รับ: ยืนตรงโดยให้ชุดหูฟัง แทรกเกอร์ และคอนโทรลเลอร์ถูกติดตาม แล้วกดอีกครั้ง",
+  ["FINGER TRACKING"] = "การติดตามนิ้ว",
+  ["Enable finger tracking"] = "เปิดการติดตามนิ้ว",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "นิ้วแต่ละนิ้วของ V จะขยับตามนิ้วของคุณ จากการติดตามมือ (ถุงมือติดตามนิ้ว คอนโทรลเลอร์ Index)\nการเปิดจะมีผลเมื่อเริ่มเกมครั้งถัดไป ปิด: ท่านิ้วจากปุ่ม",
+  ["Grip input from finger position instead of the sensor"] = "การกำจากตำแหน่งนิ้วแทนเซ็นเซอร์",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "การกำคือกำหมัดหรือชูนิ้วโป้ง จากตำแหน่งของนิ้ว\nไม่ใช่เซ็นเซอร์กำของคอนโทรลเลอร์: มือที่ผ่อนคลายจะไม่กำเลย",
+  ["Enable finger spread"] = "เปิดการกางนิ้ว",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "นิ้วของ V จะกางออกด้านข้างเหมือนนิ้วของคุณด้วย\nปิด: นิ้วจะงอตามการงอเท่านั้น",
+  ["Finger spread"] = "การกางนิ้ว",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "นิ้วของ V จะกางออกด้านข้างเหมือนนิ้วของคุณ\n0: ปิด นิ้วงอได้อย่างเดียว 1: ค่าเริ่มต้น",
 }

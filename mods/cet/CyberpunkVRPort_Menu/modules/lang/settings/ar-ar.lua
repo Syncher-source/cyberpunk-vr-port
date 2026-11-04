@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "لم يُقبل: انظر مباشرة إلى خط الأفق حتى يتحول إلى الأخضر، ثم اضغط مرة أخرى",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "لم يُقبل: مدّ الذراعين مستقيمتين على طول الصليب، ثم اثبت مرة أخرى",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "لم يُقبل: قف مستقيمًا مع تتبع النظارة وأجهزة التتبع ووحدات التحكم، ثم اضغط مرة أخرى",
+  ["FINGER TRACKING"] = "تتبع الأصابع",
+  ["Enable finger tracking"] = "تفعيل تتبع الأصابع",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "كل إصبع من أصابع V يتبع إصبعك، عبر تتبع اليدين (قفازات تتبع الأصابع، أذرع تحكم Index).\nيسري التفعيل عند التشغيل التالي للعبة. معطّل: أوضاع الأصابع من الأزرار.",
+  ["Grip input from finger position instead of the sensor"] = "الإمساك من وضعية الأصابع بدلًا من المستشعر",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "الإمساك قبضة أو إبهام مرفوع، من وضعية الأصابع،\nلا من مستشعر الإمساك في ذراع التحكم: اليد المسترخية لا تمسك أبدًا.",
+  ["Enable finger spread"] = "تفعيل تباعد الأصابع",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "تتباعد أصابع V أيضًا إلى الجانبين مثل أصابعك.\nمعطّل: تنثني الأصابع فقط، حسب الانحناء.",
+  ["Finger spread"] = "تباعد الأصابع",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "تتباعد أصابع V جانبيًا كما تفعل أصابعك.\n0: معطّل، الأصابع تنثني فقط. 1: الافتراضي.",
 }

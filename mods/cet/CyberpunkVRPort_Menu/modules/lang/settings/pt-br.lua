@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "Não registrado: olhe reto para a linha do horizonte até ela ficar verde e aperte de novo",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "Não registrado: estique os dois braços ao longo da cruz e fique parado de novo",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "Não registrado: fique reto com headset, trackers e controles rastreados e aperte de novo",
+  ["FINGER TRACKING"] = "RASTREAMENTO DOS DEDOS",
+  ["Enable finger tracking"] = "Ativar rastreamento dos dedos",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "Cada dedo de V segue o seu, pelo rastreamento das mãos (luvas com rastreamento dos dedos, controles Index).\nAtivar vale a partir do próximo início do jogo. Desativado: poses dos dedos pelos botões.",
+  ["Grip input from finger position instead of the sensor"] = "Agarrar pela posição dos dedos em vez do sensor",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "Agarrar é um punho fechado ou um joinha, pela posição dos dedos,\nnão pelo sensor de pegada do controle: uma mão relaxada nunca agarra.",
+  ["Enable finger spread"] = "Ativar abertura dos dedos",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "Os dedos de V também se abrem para os lados como os seus.\nDesativado: os dedos apenas dobram, pela flexão.",
+  ["Finger spread"] = "Abertura dos dedos",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "Os dedos de V se afastam para os lados como os seus.\n0: desligado, os dedos só dobram. 1: padrão.",
 }

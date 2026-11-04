@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "Nie przyjęto: patrz prosto na linię horyzontu, aż zrobi się zielona, potem naciśnij ponownie",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "Nie przyjęto: wyprostuj obie ręce wzdłuż krzyża, potem znów stój nieruchomo",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "Nie przyjęto: stań prosto, z goglami, trackerami i kontrolerami śledzonymi, potem naciśnij ponownie",
+  ["FINGER TRACKING"] = "ŚLEDZENIE PALCÓW",
+  ["Enable finger tracking"] = "Włącz śledzenie palców",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "Każdy palec V podąża za twoim, dzięki śledzeniu dłoni (rękawice ze śledzeniem palców, kontrolery Index).\nWłączenie działa od następnego uruchomienia gry. Wyłączone: pozy palców z przycisków.",
+  ["Grip input from finger position instead of the sensor"] = "Chwyt z położenia palców zamiast z czujnika",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "Chwyt to pięść lub kciuk w górę, z położenia palców,\na nie z czujnika chwytu kontrolera: rozluźniona dłoń nigdy nie chwyta.",
+  ["Enable finger spread"] = "Włącz rozstawianie palców",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "Palce V rozchylają się też na boki jak twoje.\nWyłączone: palce tylko się zginają, według zgięcia.",
+  ["Finger spread"] = "Rozstaw palców",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "Palce V rozchylają się na boki jak twoje.\n0: wyłączone, palce tylko się zginają. 1: domyślnie.",
 }

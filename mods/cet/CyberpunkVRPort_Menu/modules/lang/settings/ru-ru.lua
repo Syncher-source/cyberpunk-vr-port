@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "Не принято: смотрите прямо на линию горизонта, пока она не станет зелёной, затем нажмите снова",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "Не принято: вытяните обе руки вдоль креста, затем снова замрите",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "Не принято: встаньте прямо, шлем, трекеры и контроллеры отслеживаются, затем нажмите снова",
+  ["FINGER TRACKING"] = "ОТСЛЕЖИВАНИЕ ПАЛЬЦЕВ",
+  ["Enable finger tracking"] = "Включить отслеживание пальцев",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "Каждый палец V повторяет ваш, по отслеживанию рук (перчатки с отслеживанием пальцев, контроллеры Index).\nВключение вступает в силу при следующем запуске игры. Выкл.: позы пальцев от кнопок.",
+  ["Grip input from finger position instead of the sensor"] = "Хват по положению пальцев вместо датчика",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "Хват — это кулак или поднятый большой палец, по положению пальцев,\nа не по датчику хвата контроллера: расслабленная рука никогда не хватает.",
+  ["Enable finger spread"] = "Включить разведение пальцев",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "Пальцы V также разводятся в стороны, как ваши.\nВыкл.: пальцы только сгибаются, по сгибу.",
+  ["Finger spread"] = "Разведение пальцев",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "Пальцы V разводятся в стороны, как ваши.\n0: выкл., пальцы только сгибаются. 1: по умолчанию.",
 }

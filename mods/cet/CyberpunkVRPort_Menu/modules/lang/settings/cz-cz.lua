@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "Nepřijato: dívejte se přímo na linii horizontu, dokud nezezelená, pak stiskněte znovu",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "Nepřijato: napněte obě ruce podél kříže, pak znovu stůjte bez hnutí",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "Nepřijato: postavte se rovně, headset, trackery a ovladače sledované, pak stiskněte znovu",
+  ["FINGER TRACKING"] = "SLEDOVÁNÍ PRSTŮ",
+  ["Enable finger tracking"] = "Zapnout sledování prstů",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "Každý prst V následuje ten tvůj, ze sledování rukou (rukavice se sledováním prstů, ovladače Index).\nZapnutí platí od příštího spuštění hry. Vypnuto: pózy prstů z tlačítek.",
+  ["Grip input from finger position instead of the sensor"] = "Úchop z polohy prstů místo ze senzoru",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "Úchop je pěst nebo zdvižený palec, z polohy prstů,\nne ze senzoru úchopu ovladače: uvolněná ruka nikdy nechytá.",
+  ["Enable finger spread"] = "Zapnout roztažení prstů",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "Prsty V se roztahují i do stran jako ty tvoje.\nVypnuto: prsty se jen ohýbají, podle ohnutí.",
+  ["Finger spread"] = "Roztažení prstů",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "Prsty V se roztahují do stran jako tvoje.\n0: vypnuto, prsty se jen ohýbají. 1: výchozí.",
 }

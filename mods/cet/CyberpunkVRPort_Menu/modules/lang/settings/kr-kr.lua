@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "적용 안 됨: 수평선이 초록색이 될 때까지 똑바로 본 뒤 다시 누르세요",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "적용 안 됨: 양팔을 십자가를 따라 곧게 펴고 다시 가만히 있으세요",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "적용 안 됨: 헤드셋, 트래커, 컨트롤러가 추적되는 상태로 똑바로 서서 다시 누르세요",
+  ["FINGER TRACKING"] = "손가락 추적",
+  ["Enable finger tracking"] = "손가락 추적 사용",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "V의 손가락 하나하나가 당신의 손가락을 따라갑니다 (핸드 트래킹: 손가락 추적 장갑, Index 컨트롤러).\n켜기는 다음 게임 시작부터 적용됩니다. 끄기: 버튼에 따른 손가락 포즈.",
+  ["Grip input from finger position instead of the sensor"] = "센서 대신 손가락 위치로 그립 입력",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "그립은 손가락 위치로 판단하는 주먹 또는 엄지 척입니다.\n컨트롤러의 그립 센서가 아닙니다: 힘을 뺀 손은 절대 잡지 않습니다.",
+  ["Enable finger spread"] = "손가락 벌림 사용",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "V의 손가락이 당신처럼 옆으로도 벌어집니다.\n끄기: 손가락은 구부림에 따라 구부러지기만 합니다.",
+  ["Finger spread"] = "손가락 벌림",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "V의 손가락이 당신의 손가락처럼 옆으로 벌어집니다.\n0: 끔, 손가락이 굽혀지기만 함. 1: 기본값.",
 }

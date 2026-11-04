@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "受け付けられません：水平線が緑になるまでまっすぐ見てから、もう一度押してください",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "受け付けられません：両腕を十字架に沿ってまっすぐ伸ばし、もう一度静止してください",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "受け付けられません：ヘッドセット、トラッカー、コントローラーが追跡された状態でまっすぐ立ち、もう一度押してください",
+  ["FINGER TRACKING"] = "フィンガートラッキング",
+  ["Enable finger tracking"] = "指のトラッキングを有効にする",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "Vの指一本一本があなたの指に追従します（ハンドトラッキング：指トラッキング対応グローブ、Indexコントローラー）。\nオンにすると次回のゲーム起動時から適用されます。オフ：ボタンによる指のポーズ。",
+  ["Grip input from finger position instead of the sensor"] = "センサーではなく指の位置からグリップ入力",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "グリップは指の位置から判定する握りこぶしまたはサムズアップです。\nコントローラーのグリップセンサーは使いません。力を抜いた手は決して掴みません。",
+  ["Enable finger spread"] = "指の開きを有効にする",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "Vの指はあなたの指と同じように横にも開きます。\nオフ：指は曲げ具合に合わせて曲がるだけです。",
+  ["Finger spread"] = "指の開き",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "Vの指があなたの指と同じように横に開きます。\n0：オフ、指は曲がるだけ。1：標準。",
 }

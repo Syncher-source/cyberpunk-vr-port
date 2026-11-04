@@ -1,4 +1,5 @@
 #include "Fbt/Game/Calibration.hpp"
+#include "Runtimes/FingerGrip.hpp"
 #include "Utils/DebugGate.hpp"
 #include "Core/LiveControls.hpp"
 #include "Runtimes/Psvr2HapticChannel.hpp"
@@ -1776,7 +1777,12 @@ DWORD OpenXRManager::FrameThreadMain() {
                     const float trig = getFloat(m_triggerAction);
                     // Full-body tracking calibration: its steps are a pull of both triggers.
                     cvr::fbt::game::NoteTrigger(i, trig);
-                    const float grip = getFloat(m_gripAction);
+                    float grip = getFloat(m_gripAction);
+                    // Finger tracking measures the fingers every frame (V's fingers); with xr_grip_from_fingers the
+                    // grip is a fist or thumbs-up from them instead of the grip sensor (Runtimes/FingerGrip.hpp).
+                    if (const int fingers = cvr::fingergrip::Evaluate(i, m_localSpace, frameState.predictedDisplayTime);
+                        fingers >= 0 && cvr::fingergrip::GripFromFingers())
+                        grip = fingers ? 1.0f : 0.0f;
                     float sx = 0.0f, sy = 0.0f;
                     getVec2(m_thumbstickAction, sx, sy);
                     const bool sclick = getBool(m_thumbstickClickAction);

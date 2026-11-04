@@ -552,4 +552,13 @@ return {
   ["Not taken: look straight at the horizon line until it turns green, then press again"] = "Nem fogadva: nézz egyenesen a horizontvonalra, amíg zöld nem lesz, majd nyomd meg újra",
   ["Not taken: stretch both arms straight out along the cross, then hold still again"] = "Nem fogadva: nyújtsd ki mindkét karod a kereszt mentén, majd maradj újra mozdulatlan",
   ["Not taken: stand straight with the headset, trackers and controllers tracked, then press again"] = "Nem fogadva: állj egyenesen, a headset, a trackerek és a kontrollerek követve, majd nyomd meg újra",
+  ["FINGER TRACKING"] = "UJJKÖVETÉS",
+  ["Enable finger tracking"] = "Ujjkövetés bekapcsolása",
+  ["Each of V's fingers follows your own, from hand tracking (finger-tracking gloves, Index controllers).\nTurning it on applies at the next game start. Off: finger poses from the buttons."] = "V minden ujja a tiédet követi, kézkövetésből (ujjkövető kesztyűk, Index kontrollerek).\nA bekapcsolás a játék következő indításától érvényes. Ki: ujjpózok a gombokról.",
+  ["Grip input from finger position instead of the sensor"] = "Fogás az ujjak helyzetéből a szenzor helyett",
+  ["The grip is a fist or a thumbs-up, from the fingers' position,\nnot the controller's grip sensor: a relaxed hand never grips."] = "A fogás ököl vagy felfelé tartott hüvelykujj, az ujjak helyzetéből,\nnem a kontroller fogásszenzorából: az ellazult kéz soha nem fog.",
+  ["Enable finger spread"] = "Ujjszétnyitás bekapcsolása",
+  ["V's fingers also spread sideways as yours do.\nOff: the fingers only bend, from the curl."] = "V ujjai oldalra is szétnyílnak, mint a tieid.\nKi: az ujjak csak hajlanak, a hajlítás szerint.",
+  ["Finger spread"] = "Ujjak szétterpesztése",
+  ["V's fingers spread sideways as yours do.\n0: off, the fingers only curl. 1: default."] = "V ujjai oldalra széttárulnak, mint a tieid.\n0: ki, az ujjak csak hajlanak. 1: alapértelmezett.",
 }
