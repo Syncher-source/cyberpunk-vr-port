@@ -41,7 +41,7 @@ ladders, swimming, takedowns, finishers, body carry) cover it too.
 | `Helpers.cpp` | the calibration's graphics in the view (horizon line, cross, lights, lines, arrow, the step's text) |
 | `GameFont.cpp` | the step texts in the game's own font, read from its archives for the game's language |
 | `Menu.cpp` | the settings section (the trackers' switch, the calibration button, the body switches) |
-| `Natives.cpp` | the script natives for the CET menu (`VRFbtCalibrating`, `VRFbtCalibrationStep`, `VRFbtSetCalibrationText`) |
+| `Natives.cpp` | the script natives for the CET menu (`VRFbtCalibrating`, `VRFbtCalibrationStep`, `VRFbtSetCalibrationText`, `VRFbtViewWorldZ`: the height the view is drawn at, for the VR menu) |
 
 ## Where the port calls in
 

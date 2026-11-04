@@ -71,6 +71,13 @@ function Space.view()
       if wp ~= nil and wp.w ~= nil and wp.w > 0.5 then p, q = { wp.x, wp.y, wp.z }, VRViewWorldRot() end
     end)
   end
+  -- Full-body tracking draws the view at V's eyes, as calibrated, and VRViewWorldPos does not take that height.
+  if p ~= nil and type(VRFbtViewWorldZ) == "function" then
+    pcall(function()
+      local z = VRFbtViewWorldZ()
+      if z ~= nil and z.w ~= nil and z.w > 0.5 then p[3] = z.z end
+    end)
+  end
   if p == nil then
     local cam = Transform.new()
     local ok = pcall(function() Game.GetCameraSystem():GetActiveCameraWorldTransform(cam) end)

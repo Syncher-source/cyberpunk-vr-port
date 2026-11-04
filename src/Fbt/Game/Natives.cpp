@@ -1,6 +1,9 @@
 #include "Fbt/Game/Natives.hpp"
+#include "Fbt/Game/Body.hpp"
 #include "Fbt/Game/Calibration.hpp"
 #include <RED4ext/Scripting/Functions.hpp>
+
+extern "C" float CyberpunkVR_PlayerEntityPos[3];
 
 namespace {
 // VRFbtCalibrating() -> Int32: 1 while full-body tracking calibrates (Fbt/Game/Calibration.hpp). The VR menu closes
@@ -25,6 +28,18 @@ static void VRFbtSetCalibrationText(RED4ext::IScriptable*, RED4ext::CStackFrame*
     cvr::fbt::game::SetStepText(step, text.c_str());
     if (aOut) *aOut = true;
 }
+
+// VRFbtViewWorldZ() -> Vector4: Z = the height the view is drawn at while the camera stands at V's eyes, W = 1 then and
+// 0 otherwise. VRViewWorldPos stays the head the hands are built from, which does not take this height.
+static void VRFbtViewWorldZ(RED4ext::IScriptable*, RED4ext::CStackFrame* aFrame, RED4ext::Vector4* aOut, int64_t) {
+    aFrame->code++;
+    if (!aOut) return;
+    float eyeZ = 0.0f;
+    const bool on = cvr::fbt::game::CameraEyeHeight(&eyeZ);
+    aOut->X = 0.0f; aOut->Y = 0.0f;
+    aOut->Z = on ? CyberpunkVR_PlayerEntityPos[2] + eyeZ : 0.0f;
+    aOut->W = on ? 1.0f : 0.0f;
+}
 }  // namespace
 
 using namespace wrpuppets::fbt;   // the IK library (externals/wrpuppets-fbt-ik)
@@ -40,6 +55,8 @@ void RegisterNatives(RED4ext::CRTTISystem* rtti) {
     auto fbtText = RED4ext::CGlobalFunction::Create("VRFbtSetCalibrationText", "VRFbtSetCalibrationText", &VRFbtSetCalibrationText);
     fbtText->flags = flags; fbtText->AddParam("Int32", "step"); fbtText->AddParam("String", "text"); fbtText->SetReturnType("Bool");
     rtti->RegisterFunction(fbtText);
+    auto fbtViewZ = RED4ext::CGlobalFunction::Create("VRFbtViewWorldZ", "VRFbtViewWorldZ", &VRFbtViewWorldZ);
+    fbtViewZ->flags = flags; fbtViewZ->SetReturnType("Vector4"); rtti->RegisterFunction(fbtViewZ);
 }
 
 }  // namespace cvr::fbt::game
