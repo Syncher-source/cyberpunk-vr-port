@@ -13,7 +13,7 @@ Added
 - CPU affinity, for power users, in vrport.ini only: xr_cpu_affinity=1 keeps the game on the CPUs with the largest L3 cache (the V-cache side of a 7950X3D or 9950X3D), and does nothing when the caches are the same size. A hex mask sets the CPUs by hand. Off by default; applies at the next game start.
 
 Fixed
-- A grenade on the belt was taken only at the moment the grip closed, which a hand already closed on finger-tracking gloves never has. A closed grip at the holder now takes it.
+- With the grip read from the fingers, a grenade on the belt was taken only at the moment the grip closed, which a hand already closed never has. A closed grip at the holder now takes it.
 - With V's arms on full-body tracking, the palm the belt measures from stayed frozen, so the grenade holders never lit or took.
 - With the grip read from the fingers, every button and stick stopped working after L3 + R3, in the VR menu and in the game, until the hands opened.
 - With the interaction and loot panels locked to the head, the main HUD still trailed behind them, because its free-look cone stopped at 5 degrees. The cone now goes down to 0, which locks the main HUD to the head too.

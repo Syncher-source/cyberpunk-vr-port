@@ -294,6 +294,13 @@ void VRMenuOpenSettings(RED4ext::IScriptable*, RED4ext::CStackFrame* stack, bool
     if (out) *out = open;
 }
 
+// VRGripFromFingers() -> Bool: the grip is read from the fingers (xr_grip_from_fingers), so a hand closed on the controller
+// reads as gripping before it does anything; what waits for a grip to close asks here.
+void VRGripFromFingers(RED4ext::IScriptable*, RED4ext::CStackFrame* stack, bool* out, int64_t) {
+    stack->code++;
+    if (out) *out = cvr::fingergrip::GripFromFingers();
+}
+
 // VRMenuCapture(open): while the menu is open the triggers, grips and face buttons stop reaching the game.
 void VRMenuCapture(RED4ext::IScriptable*, RED4ext::CStackFrame* stack, bool* out, int64_t) {
     bool open = false;

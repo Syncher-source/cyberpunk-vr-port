@@ -1952,14 +1952,17 @@ updateGrenadeGrab = function(now, dt)
         return
     end
 
-    -- FREE: a grip closed while that hand is at the grenade holder takes it. Closed, not closing: a hand on
-    -- finger-tracking gloves can be closed already when it reaches the belt, and has no moment of closing there.
+    -- FREE: a grip that CLOSES while that hand is at the grenade holder takes it. With the grip read from the
+    -- fingers a closed grip is enough: the hand can be closed already when it reaches the belt.
+    local closedTakes = false
+    if type(VRGripFromFingers) == "function" then pcall(function() closedTakes = VRGripFromFingers() == true end) end
     E.S.grab.spent = E.S.grab.spent or {}
     for side = 0, 1 do
         local down = gripDown(side)
+        local edge = down and (closedTakes and not E.S.grab.spent[side] or not E.S.grab.was[side])
         E.S.grab.was[side] = down
         if not down then E.S.grab.spent[side] = nil end
-        if down and not E.S.grab.spent[side] and E.S.grab.slot == nil then
+        if edge and E.S.grab.slot == nil then
             local host = E.S.litHand[side]
             -- The proximity test the mark already ran IS the "at the belt" condition -- see the note
             -- on E.CFG.grenade_grab. Nothing else can start a grab.
