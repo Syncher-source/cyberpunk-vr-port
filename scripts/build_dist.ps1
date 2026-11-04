@@ -376,6 +376,11 @@ if (Test-Path $changelog) {
     Write-Host "[!] CHANGELOG.md not found -- the package ships without one"
 }
 
+# ---- the licences, beside INSTALL.txt ---------------------------------------------------------
+# MIT asks for the notice in every copy. Not through Add-File, as the changelog: documents in the zip, not game files.
+Copy-Item (Need (Join-Path $RepoRoot "LICENSE") "LICENSE") (Join-Path $Out "LICENSE.txt") -Force
+Copy-Item (Need (Join-Path $RepoRoot "externals\wrpuppets-fbt-ik\LICENSE") "wrpuppets-fbt-ik LICENSE") (Join-Path $Out "LICENSE-wrpuppets-fbt-ik.txt") -Force
+
 # ---- the uninstaller, GENERATED from the manifest ----------------------------------------------
 # Both the runnable UNINSTALL.bat and the UNINSTALL.txt beside it are derived from what this run
 # actually copied. Typed by hand they go stale on the first mod added -- exactly the way the grip
