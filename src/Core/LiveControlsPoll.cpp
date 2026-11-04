@@ -301,6 +301,12 @@ extern "C" __declspec(dllexport) extern int32_t  CyberpunkVR_FixLodEnable;
 extern "C" __declspec(dllexport) extern int      CyberpunkVR_HudToSecondEye;
 // xr_vive_trackers: kept here so a save keeps it; Fbt/Game/Trackers.cpp reads it when the session starts.
 static int g_viveTrackersSetting = 0;
+// The HUD in front of the world and the prompt at its object's depth (Runtimes/HudClearance.hpp, InteractionDepth.hpp).
+extern "C" __declspec(dllexport) extern int      CyberpunkVR_InteractionAnchor;
+extern "C" __declspec(dllexport) extern int      CyberpunkVR_HudClearance;
+extern "C" __declspec(dllexport) extern float    CyberpunkVR_HudClearanceGrow;
+extern "C" __declspec(dllexport) extern int      CyberpunkVR_HudClearanceHands;
+extern "C" __declspec(dllexport) extern float    CyberpunkVR_HudClearanceHandsScale;
 extern "C" __declspec(dllexport) extern int      CyberpunkVR_AutoRecenter;
 extern "C" __declspec(dllexport) extern int      CyberpunkVR_FingerBones;
 extern "C" __declspec(dllexport) extern float    CyberpunkVR_FingerSpread;
@@ -568,6 +574,11 @@ void PollLiveControls() {
     int xrLightContent = CyberpunkVR_LightContent;
     int32_t  xrFixLod = CyberpunkVR_FixLodEnable;
     int      xrHudTo2 = CyberpunkVR_HudToSecondEye;
+    int      xrInteractionAnchor = CyberpunkVR_InteractionAnchor;
+    int      xrHudClearance = CyberpunkVR_HudClearance;
+    float    xrHudClearanceGrow = CyberpunkVR_HudClearanceGrow;
+    int      xrHudClearanceHands = CyberpunkVR_HudClearanceHands;
+    float    xrHudClearanceHandsScale = CyberpunkVR_HudClearanceHandsScale;
     int      xrAutoRecenter = CyberpunkVR_AutoRecenter;
     int      xrFingerBones = CyberpunkVR_FingerBones;
     int      xrGripFromFingers = cvr::fingergrip::GripFromFingers() ? 1 : 0;
@@ -924,6 +935,31 @@ void PollLiveControls() {
         if (sscanf_s(line, "xr_finger_bones=%d", &intValue) == 1 ||
             sscanf_s(line, "xr_finger_bones = %d", &intValue) == 1) {
             xrFingerBones = intValue ? 1 : 0;
+            continue;
+        }
+        if (sscanf_s(line, "xr_interaction_anchor=%d", &intValue) == 1 ||
+            sscanf_s(line, "xr_interaction_anchor = %d", &intValue) == 1) {
+            xrInteractionAnchor = intValue ? 1 : 0;
+            continue;
+        }
+        if (sscanf_s(line, "xr_hud_clearance_hands_scale=%f", &value) == 1 ||
+            sscanf_s(line, "xr_hud_clearance_hands_scale = %f", &value) == 1) {
+            xrHudClearanceHandsScale = std::isfinite(value) ? std::clamp(value, 1.0f, 3.0f) : 2.0f;
+            continue;
+        }
+        if (sscanf_s(line, "xr_hud_clearance_hands=%d", &intValue) == 1 ||
+            sscanf_s(line, "xr_hud_clearance_hands = %d", &intValue) == 1) {
+            xrHudClearanceHands = intValue ? 1 : 0;
+            continue;
+        }
+        if (sscanf_s(line, "xr_hud_clearance_grow=%f", &value) == 1 ||
+            sscanf_s(line, "xr_hud_clearance_grow = %f", &value) == 1) {
+            xrHudClearanceGrow = std::isfinite(value) ? std::clamp(value, 0.0f, 1.0f) : 0.5f;
+            continue;
+        }
+        if (sscanf_s(line, "xr_hud_clearance=%d", &intValue) == 1 ||
+            sscanf_s(line, "xr_hud_clearance = %d", &intValue) == 1) {
+            xrHudClearance = intValue ? 1 : 0;
             continue;
         }
         if (sscanf_s(line, "xr_hud_to_second_eye=%d", &intValue) == 1 ||
@@ -1896,6 +1932,11 @@ void PollLiveControls() {
     CyberpunkVR_LightContent = xrLightContent;
     CyberpunkVR_FixLodEnable = xrFixLod;
     CyberpunkVR_HudToSecondEye = xrHudTo2;
+    CyberpunkVR_InteractionAnchor = xrInteractionAnchor;
+    CyberpunkVR_HudClearance = xrHudClearance;
+    CyberpunkVR_HudClearanceGrow = xrHudClearanceGrow;
+    CyberpunkVR_HudClearanceHands = xrHudClearanceHands;
+    CyberpunkVR_HudClearanceHandsScale = xrHudClearanceHandsScale;
     CyberpunkVR_AutoRecenter = xrAutoRecenter;
     CyberpunkVR_FingerBones = xrFingerBones;
     cvr::fingergrip::SetGripFromFingers(xrGripFromFingers != 0);
@@ -2027,6 +2068,11 @@ LiveControlsUiState MakeLiveControlsUiState() {
     state.xrFingerBones=CyberpunkVR_FingerBones;
     state.xrFingerSpreadOn=CyberpunkVR_FingerSpreadOn;
     state.xrFingerSpread=CyberpunkVR_FingerSpread;
+    state.xrHudClearance=CyberpunkVR_HudClearance;
+    state.xrHudClearanceGrow=CyberpunkVR_HudClearanceGrow;
+    state.xrHudClearanceHands=CyberpunkVR_HudClearanceHands;
+    state.xrHudClearanceHandsScale=CyberpunkVR_HudClearanceHandsScale;
+    state.xrInteractionAnchor=CyberpunkVR_InteractionAnchor;
     state.xrHudBrightness=g_liveControls.xrHudBrightness;
     state.xrHudShadow=g_liveControls.xrHudShadow;
     state.xrHudGlow=g_liveControls.xrHudGlow;
@@ -2319,6 +2365,16 @@ void PersistLiveControlsUiState(const LiveControlsUiState& state) {
     fprintf(file, "xr_hud_to_second_eye=%d\n", CyberpunkVR_HudToSecondEye);
     // 1 = full-body tracking: read the Vive trackers (waist, feet; Fbt/Game/Trackers.cpp). Next session.
     fprintf(file, "xr_vive_trackers=%d\n", g_viveTrackersSetting);
+    // 1 = the interaction prompt sits at the depth of the object it is about; 0 = xr_interaction_distance.
+    fprintf(file, "xr_interaction_anchor=%d\n", state.xrInteractionAnchor ? 1 : 0);
+    // 1 = the HUD panels come in front of anything nearer than their configured distance.
+    fprintf(file, "xr_hud_clearance=%d\n", state.xrHudClearance ? 1 : 0);
+    // 0..1: how much a panel grows as it comes in (0 = same size on screen, 1 = same size in the world).
+    fprintf(file, "xr_hud_clearance_grow=%.2f\n", state.xrHudClearanceGrow);
+    // 1 = a tracked hand in front of a HUD panel pushes the panel out of view (with xr_hud_clearance).
+    fprintf(file, "xr_hud_clearance_hands=%d\n", state.xrHudClearanceHands ? 1 : 0);
+    // How far a hand pushes the HUD out: its scale while a hand is in front (1 = not at all, 3 = out of view).
+    fprintf(file, "xr_hud_clearance_hands_scale=%.2f\n", state.xrHudClearanceHandsScale);
     // 1 = recenter automatically when the headset is put back on after being taken off.
     fprintf(file, "xr_auto_recenter=%d\n", CyberpunkVR_AutoRecenter);
     // 1 = finger tracking: V's fingers follow the player's (OpenXR hand tracking: gloves, Index controllers); turning it
@@ -2513,6 +2569,11 @@ extern "C" void SetLiveControlsUiState(const LiveControlsUiState* state, int per
     CyberpunkVR_FingerBones=state->xrFingerBones!=0;
     CyberpunkVR_FingerSpread=std::clamp(state->xrFingerSpread,0.0f,2.0f);
     CyberpunkVR_FingerSpreadOn=state->xrFingerSpreadOn!=0;
+    CyberpunkVR_HudClearance=state->xrHudClearance!=0;
+    CyberpunkVR_HudClearanceGrow=std::clamp(state->xrHudClearanceGrow,0.0f,1.0f);
+    CyberpunkVR_HudClearanceHands=state->xrHudClearanceHands!=0;
+    CyberpunkVR_HudClearanceHandsScale=std::clamp(state->xrHudClearanceHandsScale,1.0f,3.0f);
+    CyberpunkVR_InteractionAnchor=state->xrInteractionAnchor!=0;
     g_liveControls.xrHudBrightness=(state->xrHudBrightness>=0.25f && state->xrHudBrightness<=3) ? state->xrHudBrightness : 1;
     g_liveControls.xrHudShadow=(state->xrHudShadow>=0 && state->xrHudShadow<=2) ? state->xrHudShadow : 1;
     g_liveControls.xrHudGlow=(state->xrHudGlow>=0 && state->xrHudGlow<=2) ? state->xrHudGlow : 1;
