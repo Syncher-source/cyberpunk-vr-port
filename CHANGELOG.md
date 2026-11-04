@@ -14,6 +14,7 @@ Added
 
 Fixed
 - A grenade on the belt was taken only at the moment the grip closed, which a hand already closed on finger-tracking gloves never has. A closed grip at the holder now takes it.
+- With the grip read from the fingers, every button and stick stopped working after L3 + R3, in the VR menu and in the game, until the hands opened.
 - With the interaction and loot panels locked to the head, the main HUD still trailed behind them, because its free-look cone stopped at 5 degrees. The cone now goes down to 0, which locks the main HUD to the head too.
 - Arm cyberware could be selected but not used on some characters: with the mantis blades (or other arm cyberware) out the arms fell back to the game's flat idle, blocking worked and attacks did not. The port let go of the arms when the character's skeleton was over 800 bones, and what V wears counts: clothing with many bones of its own plus the implant's went past it, which is why it followed certain saves. The limit is now 2048.
 - Saves of a female V loaded as a bald man without her cyberware (0.2.0's lobby body file swapped the game's default body gender, and a save stores V's gender only as a difference from it). Women's and men's saves load as they were saved again, nothing in the saves is changed, and the lobby's own body no longer touches the game's records. The leftover file of 0.2.0 is deleted on start when 0.2.1 is unpacked over it.
