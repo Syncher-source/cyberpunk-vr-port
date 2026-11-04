@@ -307,6 +307,8 @@ extern "C" __declspec(dllexport) extern int      CyberpunkVR_HudClearance;
 extern "C" __declspec(dllexport) extern float    CyberpunkVR_HudClearanceGrow;
 extern "C" __declspec(dllexport) extern int      CyberpunkVR_HudClearanceHands;
 extern "C" __declspec(dllexport) extern float    CyberpunkVR_HudClearanceHandsScale;
+// xr_cpu_affinity: kept here so a save keeps it (text: 0, 1 = auto, or a hex mask); Core/CpuAffinity.cpp reads it at load.
+static char g_cpuAffinitySetting[32] = "0";
 extern "C" __declspec(dllexport) extern int      CyberpunkVR_AutoRecenter;
 extern "C" __declspec(dllexport) extern int      CyberpunkVR_FingerBones;
 extern "C" __declspec(dllexport) extern float    CyberpunkVR_FingerSpread;
@@ -907,6 +909,8 @@ void PollLiveControls() {
             xrCompGroup = static_cast<uint32_t>(intValue < 0 ? 0 : intValue);
             continue;
         }
+        if (sscanf_s(line, "xr_cpu_affinity=%31s", g_cpuAffinitySetting, (unsigned)sizeof(g_cpuAffinitySetting)) == 1 ||
+            sscanf_s(line, "xr_cpu_affinity = %31s", g_cpuAffinitySetting, (unsigned)sizeof(g_cpuAffinitySetting)) == 1) continue;
         if (sscanf_s(line, "xr_auto_recenter=%d", &intValue) == 1 ||
             sscanf_s(line, "xr_auto_recenter = %d", &intValue) == 1) {
             xrAutoRecenter = intValue ? 1 : 0;
@@ -2375,6 +2379,8 @@ void PersistLiveControlsUiState(const LiveControlsUiState& state) {
     fprintf(file, "xr_hud_clearance_hands=%d\n", state.xrHudClearanceHands ? 1 : 0);
     // How far a hand pushes the HUD out: its scale while a hand is in front (1 = not at all, 3 = out of view).
     fprintf(file, "xr_hud_clearance_hands_scale=%.2f\n", state.xrHudClearanceHandsScale);
+    // CPU affinity at the next start: 0 = untouched, 1 = the CPUs of the largest L3 (X3D V-cache CCD), or a hex mask.
+    fprintf(file, "xr_cpu_affinity=%s\n", g_cpuAffinitySetting);
     // 1 = recenter automatically when the headset is put back on after being taken off.
     fprintf(file, "xr_auto_recenter=%d\n", CyberpunkVR_AutoRecenter);
     // 1 = finger tracking: V's fingers follow the player's (OpenXR hand tracking: gloves, Index controllers); turning it
