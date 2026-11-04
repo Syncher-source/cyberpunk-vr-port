@@ -34,6 +34,7 @@
 #include "Core/LiveControls.hpp"
 #include "Overlay/VrOverlay.hpp"
 #include "Overlay/UiRec.hpp"
+#include "Runtimes/FingerGrip.hpp"
 #include "Runtimes/OpenXRManager.hpp"
 #include "Fbt/Game/Calibration.hpp"
 
@@ -188,7 +189,9 @@ void VRMenuGesture(RED4ext::IScriptable*, RED4ext::CStackFrame* stack, RED4ext::
     uint64_t sequence{}, stamp{};
     VRControllerState input{};
     auto& xr = OpenXRManager::Get();
-    if (!g_liveControls.xrMenuGesture || !xr.GetGestureHandFrame(&head, hands, &sequence, &stamp, false) || !hands[1].valid ||
+    // With the grip read from the fingers a hand closed on the controller grips all the time, and any move down would be
+    // a swipe: the menu then opens with L3 + R3 only.
+    if (!g_liveControls.xrMenuGesture || cvr::fingergrip::GripFromFingers() || !xr.GetGestureHandFrame(&head, hands, &sequence, &stamp, false) || !hands[1].valid ||
         !xr.GetControllerState(&input) || !input.rightHandValid) {
         g_swipe.Clear();
         return;

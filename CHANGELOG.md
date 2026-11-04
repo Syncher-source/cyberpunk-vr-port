@@ -6,7 +6,7 @@ Unofficial build by Syncher-source: dariulone's 0.2.1 with full-body tracking, f
 
 Added
 - Full-body tracking: three Vive Trackers (waist, left foot, right foot) drive V's legs, hips and spine, and V's arms reach the controllers. Calibrated in game in three steps, with the texts in all 18 languages. Off until it is set up; without trackers nothing changes. Tested walking around a room; swimming, driving, ladders, sitting and takedowns are still being tested and may need fixes. Setup: give the trackers the roles Waist, Left Foot and Right Foot in SteamVR, turn on Enable Vive trackers in the settings and restart the game, load a save, then run the calibration. Calibrate at every session.
-- Finger tracking: each of V's fingers follows yours, with finger-tracking gloves and Valve Index controllers (OpenXR hand tracking). The grip can come from a fist or a thumbs-up instead of the grip sensor, and the fingers can spread sideways. Off by default; turning it on applies at the next game start.
+- Finger tracking: each of V's fingers follows yours, with finger-tracking gloves and Valve Index controllers (OpenXR hand tracking). The grip can come from a fist or a thumbs-up instead of the grip sensor (the VR menu then opens with L3 + R3 only, not with the grip swipe), and the fingers can spread sideways. Off by default; turning it on applies at the next game start.
 - The HUD stays in front of the world: near a wall, a door or a person it comes in just in front of them, and goes back out when there is room. Off by default.
 - Your hands push the HUD out of view while they are in front of it, so it never covers them. Off by default.
 - The interaction prompt can sit on the object it names, instead of at a fixed distance. Off by default.
