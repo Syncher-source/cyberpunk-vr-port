@@ -14,10 +14,9 @@ outside the game, records and replays sessions: FBT bug reports go there, with a
 
 1. In SteamVR, *Manage Vive Trackers*: give each tracker its role, **Waist**, **Left Foot** and **Right Foot**. The
    trackers are found by these roles (OpenXR `XR_HTCX_vive_tracker_interaction`), not by their order.
-2. In the settings, Full-body tracking: *Enable Vive trackers*, then restart the game.
-3. Load a save and turn on the three switches in the settings: *V's legs follow the trackers*, *V's spine and head
-   follow the headset*, *V's arms follow the controllers*. They are off on a new install and stay as you leave them.
-4. *Calibrate full-body tracking* in the settings (in game only, not in the lobby), at every session: belts and
+2. In the settings, Full-body tracking: *Enable Vive trackers* (it also turns on the legs, spine and arms switches),
+   then restart the game.
+3. Load a save, then *Calibrate full-body tracking* in the settings (in game only, not in the lobby), at every session: belts and
    straps move.
    1. look ahead at the horizon line, both triggers: eye height and heading;
    2. arms along the body, look down, both triggers: scale and the trackers' offsets to V's hips and feet;

@@ -13,7 +13,12 @@ bool DrawSettingsSection(LiveControlsUiState& state) {
     if (UI::CollapsingHeader("FULL-BODY TRACKING", ImGuiTreeNodeFlags_DefaultOpen)) {
         // The extension is chosen when the OpenXR instance is created: the switch applies at the next start.
         bool trackers = state.xrViveTrackers != 0;
-        if (UI::Checkbox("Enable Vive trackers", &trackers)) { state.xrViveTrackers = trackers ? 1 : 0; changed = true; }
+        if (UI::Checkbox("Enable Vive trackers", &trackers)) {
+            state.xrViveTrackers = trackers ? 1 : 0;
+            changed = true;
+            // Turning the trackers on is asking for the body: the switches below start on, and can be turned off.
+            if (trackers) { SetLegsEnabled(true); SetSpineEnabled(true); SetArmsEnabled(true); }
+        }
         if (UI::IsItemHovered()) UI::SetTooltip("Reads your Vive Trackers. Give them the roles Waist, Left Foot and Right Foot in SteamVR.\nTurning it on applies at the next game start.");
         const int step = CalibrationStep();
         if (step == 0) {
