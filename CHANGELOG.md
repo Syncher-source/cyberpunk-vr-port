@@ -10,6 +10,7 @@ Added
 - The HUD stays in front of the world: near a wall, a door or a person it comes in just in front of them, and goes back out when there is room. Off by default.
 - Your hands push the HUD out of view while they are in front of it, so it never covers them. Off by default.
 - The interaction prompt can sit on the object it names, instead of at a fixed distance. Off by default.
+- CPU affinity, for power users, in vrport.ini only: xr_cpu_affinity=1 keeps the game on the CPUs with the largest L3 cache (the V-cache side of a 7950X3D or 9950X3D), and does nothing when the caches are the same size. A hex mask sets the CPUs by hand. Off by default; applies at the next game start.
 
 Fixed
 - With the interaction and loot panels locked to the head, the main HUD still trailed behind them, because its free-look cone stopped at 5 degrees. The cone now goes down to 0, which locks the main HUD to the head too.
