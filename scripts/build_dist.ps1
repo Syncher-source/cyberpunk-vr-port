@@ -6,11 +6,11 @@
 #
 # Usage:
 #   pwsh scripts\build_dist.ps1
-#   pwsh scripts\build_dist.ps1 -Version 0.2.1 -Zip
+#   pwsh scripts\build_dist.ps1 -Version 0.2.1-embodiment.1 -Zip
 
 param(
     [ValidatePattern('^\d+\.\d+\.\d+(?:-[A-Za-z0-9][A-Za-z0-9.-]*)?$')]
-    [string]$Version = "0.2.1",
+    [string]$Version = "0.2.1-embodiment.1",
     # The game 2.5 build tree (RED4ext.SDK game-2.5); build\ is the old 2.31 tree and its DLL is stale.
     [string]$BuildDir = "build\patchday\sdk25-build",
     [switch]$Zip,
@@ -20,7 +20,7 @@ param(
 $ErrorActionPreference = "Stop"
 $RepoRoot = (Resolve-Path "$PSScriptRoot\..").Path
 $DistRoot = [IO.Path]::GetFullPath((Join-Path $RepoRoot "dist"))
-$Out      = [IO.Path]::GetFullPath((Join-Path $DistRoot "CyberpunkVRPort-$Version"))
+$Out      = [IO.Path]::GetFullPath((Join-Path $DistRoot "CyberpunkVREmbodiment-$Version"))
 if ((Split-Path $Out -Parent) -ne $DistRoot) { throw "Package path must be directly inside dist" }
 
 # Folders that exist for development and have no business in a tester's game.
@@ -246,8 +246,14 @@ if (Test-Path $inputDir) {
 
 # ---- the note a tester actually reads ----------------------------------------------------------
 $readme = @"
-CyberpunkVRPort $Version
-========================
+Cyberpunk VR Embodiment $Version
+================================
+
+Built on dariulone's CyberpunkVR Port (github.com/dariulone/cyberpunk-vr-port). All the credit for
+the port is theirs. Report problems with this build at
+github.com/Syncher-source/cyberpunk-vr-embodiment/issues, not to dariulone.
+
+This is an unofficial fan work and is not approved/endorsed by CD PROJEKT RED.
 
 WHAT THIS IS
     A VR mod for Cyberpunk 2077: stereo rendering through OpenXR, 6DoF head tracking, motion
@@ -414,8 +420,8 @@ $dirLines   = ($ownDirs | ForEach-Object { "    " + $_ + "\" }) -join "`r`n"
 $looseLines = ($loose   | ForEach-Object { "    " + $_        }) -join "`r`n"
 
 $uninstall = @"
-CyberpunkVRPort $Version -- UNINSTALL
-=====================================
+Cyberpunk VR Embodiment $Version -- UNINSTALL
+=============================================
 
 Run UNINSTALL.bat in this folder and it does all of part 1, 2 and 3 below for you, then offers to
 put your own Cyberpunk settings back. This file is the same thing written out, for anyone who
@@ -648,7 +654,7 @@ exit /b 0
 Set-Content (Join-Path $Out "UNINSTALL.bat") $bat -Encoding ascii
 
 # ---- report -------------------------------------------------------------------------------------
-Write-Host "dist\CyberpunkVRPort-$Version"
+Write-Host "dist\CyberpunkVREmbodiment-$Version"
 foreach ($m in $manifest) {
     if ($m.Bytes -gt 0) { Write-Host ("  {0,-62} {1,10:N0}" -f $m.Path, $m.Bytes) }
     else                { Write-Host ("  {0}" -f $m.Path) }

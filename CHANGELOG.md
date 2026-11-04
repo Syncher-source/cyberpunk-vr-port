@@ -1,8 +1,10 @@
 Changelog
 
-0.2.1-fbt.1
+0.2.1-embodiment.1
 
-Unofficial build by Syncher-source: dariulone's 0.2.1 with full-body tracking, finger tracking and the HUD work added. Report problems with this build to Syncher-source, not to dariulone. Full-body tracking reports go to github.com/Syncher-source/cyberpunk-fbt-lab.
+Cyberpunk VR Embodiment by Syncher-source: dariulone's 0.2.1 with full-body tracking, finger tracking and the HUD work added. Free, like the port. Report problems with this build at github.com/Syncher-source/cyberpunk-vr-embodiment/issues, not to dariulone. Full-body tracking reports go to github.com/Syncher-source/cyberpunk-fbt-lab.
+
+This is an unofficial fan work and is not approved/endorsed by CD PROJEKT RED.
 
 Added
 - Full-body tracking: three Vive Trackers (waist, left foot, right foot) drive V's legs, hips and spine, and V's arms reach the controllers. Calibrated in game in three steps, with the texts in all 18 languages. Off until it is set up; without trackers nothing changes. Tested walking around a room; swimming, driving, ladders, sitting and takedowns are still being tested and may need fixes. Setup: give the trackers the roles Waist, Left Foot and Right Foot in SteamVR, turn on Enable Vive trackers in the settings and restart the game, load a save, then run the calibration. Calibrate at every session.

@@ -1,4 +1,12 @@
-# CyberpunkVR Port
+# Cyberpunk VR Embodiment
+
+> **Built on [dariulone's CyberpunkVR Port](https://github.com/dariulone/cyberpunk-vr-port).** All the credit for the port
+> is theirs. Cyberpunk VR Embodiment adds full-body tracking, finger tracking and HUD comfort on top of it, and stays
+> free. Report problems with this build [here](https://github.com/Syncher-source/cyberpunk-vr-embodiment/issues), not
+> to dariulone. Full-body tracking reports go to the
+> [cyberpunk-fbt-lab](https://github.com/Syncher-source/cyberpunk-fbt-lab).
+>
+> This is an unofficial fan work and is not approved/endorsed by CD PROJEKT RED.
 
 A 6-DoF **VR mod for Cyberpunk 2077**, built as a **RED4ext plugin** -
 `cyberpunkvrport.dll` is the ONLY native plugin: it drives OpenXR head
@@ -7,7 +15,8 @@ motion-controlled hands** that used to live in a second DLL; and a set of CET / 
 weapon aiming, the physical reload, motion melee, hand-to-holster equipping and more. Everything is
 configured in the VR menu (**hold L3+R3**) or the in-headset overlay (**F10**).
 
-Repository: <https://github.com/dariulone/cyberpunk-vr-port>
+Repository: <https://github.com/Syncher-source/cyberpunk-vr-embodiment>
+The port it is built on: <https://github.com/dariulone/cyberpunk-vr-port>
 
 > ⚠️ Experimental community mod. Not affiliated with CD PROJEKT RED. Use at your
 > own risk and keep backups of your saves.
